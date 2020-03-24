@@ -1,0 +1,12 @@
+[Unit]
+requires=network-online.target
+wants=network-online.target
+after=network-online.target 
+Description=lsboot 
+
+[Service] 
+type=oneshot
+ExecStart=/var/scripts/lsboot.sh 
+
+[Install] 
+WantedBy=multi-user.target
